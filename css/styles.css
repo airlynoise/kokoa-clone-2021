@@ -23,8 +23,15 @@
 body {
     color: #2e363e;
     font-family: 'Open Sans', sans-serif;
+    /* background: ; */
+    background: #587e5b;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    /* background-size: 50%; */
+    /* height: 100vh; */
 }
 
 .main-screen {
-    padding: 0px var(--horizontal-space);
+    margin-bottom: 64px;
+    /* padding: 0px var(--horizontal-space); */
 }

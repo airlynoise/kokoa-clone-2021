@@ -5,7 +5,10 @@
     background-color: #f9f9fa;
     padding: 20px 50px;
     box-sizing: border-box;
-    border-top: 1px solid rgba(121,121,121,0.3);
+    /* border-top: 1px solid rgba(121,121,121,0.3); */
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(25px);
+    box-shadow: 0 0px 8px rgb(0 0 0 / 10%);
 }
 
 .nav__list {
@@ -16,6 +19,10 @@
 .nav__link {
     position: relative;
     color: inherit;
+}
+
+.nav__link i {
+    font-size: 1.5em;
 }
 
 @keyframes notificationAnimation {
@@ -30,11 +37,31 @@
     }
 }
 
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-0.5px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(1px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-2px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(2px, 0, 0);
+    }
+  }
+
 .nav__notification {
     position: absolute;
     left: 15px;
     bottom: 15px;
-    animation: notificationAnimation 2s ease-in-out infinite;
+    /* animation: notificationAnimation 2s ease-in-out infinite; */
+    animation: shake 1s cubic-bezier(.36,.07,.19,.97) both 3;
+  transform: translate3d(0, 0, 0);
 }
 
 @keyframes appearBtnAnimation {

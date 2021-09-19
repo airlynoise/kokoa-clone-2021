@@ -1,6 +1,20 @@
 .user-component {
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin: 0 10px 15px;
+    /* margin-bottom: 15px; */
+    padding: 10px 10px;
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 37px;
+    /* backdrop-filter: blur(25px); */
+    box-shadow: 0 2px 10px -5px rgba(49, 66, 46, 0.5);
+    transition: 0.1s;
+}
+
+.user-component:hover {
+    background-color: #ffd02c;
+    box-shadow: 0 2px 10px -5px rgba(49, 66, 46, 1);
+    /* color: #fff; */
 }
 
 .user-component,
@@ -10,37 +24,44 @@
 }
 
 .user-component__avatar {
-    width: 70px;
-    height: 70px;
-    border-radius: 30px;
-    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+    margin-right: 10px;
+}
+
+.user-component__avatar i {
+    font-size: 32px;
 }
 
 .user-component__title {
     font-weight: 600;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .user-component__subtitle {
     margin-top: 8px;
-    font-size: 17px;
+    font-size: 14px;
     color: rgba(0,0,0,0.5);
     display: inline-block;
 }
 
 .user-component__subtitle + i {
-    color:rgb(247, 104, 94);
+    color: #f6f4f2;
 }
 
 .user-component__avatar--xl {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
 }
 
 .user-component__avatar--sm {
-    width: 60px;
-    height: 60px;
-    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
 }
 
 .user-component__title--not-bold {
@@ -52,9 +73,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    margin-right: 10px;
 }
 
 .user-component__time {
     display: block;
     margin-bottom: 10px;
+    font-size: 14px;
 }
